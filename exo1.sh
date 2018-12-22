@@ -17,6 +17,7 @@ ppreciation()
         echo "insuffisant"
     fi
 }
+# programme principal
 clear
 if [ $# -ne 0 ]
 then
