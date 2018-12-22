@@ -17,15 +17,12 @@ ppreciation()
         echo "insuffisant"
     fi
 }
-
-    if [ $note -ge 0 ]
-    then
-        let moyenne=$moyenne+$note
-        let i=$i+1
-    fi
-done
-if [ $i -le 0 ];then let i=1
+clear
+if [ $# -ne 0 ]
+then
+    note=$1
+else
+    echo "Saisir une note"
+    read note
 fi
-# calcul de la moyenne 
-let moyenne=$moyenne/$i
-echo "La moyenne est de $moyenne ($i notes)"
+appreciation
